@@ -1,0 +1,9 @@
+<div class="ui text menu">
+  <div class="header item">Sort By</div>
+  <a class="item" [ngClass]="{'active' : this.selectedItem == sortPrice.innerText}" (click)=" sortByPrice()" #sortPrice>
+    Price
+  </a>
+  <a class="item" [ngClass]="{'active' : this.selectedItem == sortName.innerText}" (click)="sortByName()" #sortName>
+    Name
+  </a>
+</div>

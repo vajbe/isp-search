@@ -1,0 +1,30 @@
+<div class="ui segment isplist" *ngIf="providerSub | async; else spinnerBlock">
+  <div class="ui search">
+    <div class="ui icon input">
+      <input class="prompt" type="search" placeholder="Search ISPs..." (input)="searchProvider()"
+        [(ngModel)]="this.searchQuery">
+      <i class="search icon"></i>
+    </div>
+    <div class="results"></div>
+  </div>
+  <div class="ui selection list">
+    <div class="item" *ngFor="let provider of this.providersList">
+      <img class="ui avatar image" src="{{provider.img}}">
+      <div class="content" (click)="showProvider(provider)">
+        <div class="header">{{provider.isp_name}}</div>
+        <p>Price: {{provider.lowest_price}} Desc: {{provider.description | slice:0:10 }}...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #spinnerBlock>
+  <div class="ui segments spinner-segment">
+    <div class="ui segment">
+      <div class="ui active inverted dimmer">
+        <div class="ui text loader">Loading ISP List</div>
+      </div>
+      <p></p>
+    </div>
+  </div>
+</ng-template>

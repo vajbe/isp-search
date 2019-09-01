@@ -1,0 +1,28 @@
+<div class="ui main text container">
+  <h1 class="ui dividing header">ISP Search Made Easy</h1>
+  <div class="ui segment"><label>Total ISP : <b>9</b> | API Hits : <b>100</b> | Date :
+      <b>
+        {{ this.currDate }}
+      </b>
+    </label>
+  </div>
+  <hr>
+  <div class="two column stackable ui grid">
+    <div class="row">
+      <div class="column">
+        <app-dashlist></app-dashlist>
+      </div>
+      <div class="column">
+        <app-dashdesc></app-dashdesc>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <app-sort-comp></app-sort-comp>
+      </div>
+      <div class="column">
+          <app-options-comp></app-options-comp>
+        </div>
+    </div>
+  </div>
+</div>

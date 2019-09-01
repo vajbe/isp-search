@@ -1,0 +1,31 @@
+<div class="ui segments"  *ngIf="this.providerSub | async; else spinnerBlock">
+  <div class="ui segment">
+    <h3><b>{{this.selectedProvider.isp_name}}</b></h3>
+  </div>
+
+  <div class="ui secondary segment">
+    <p><i class="fas fa-wifi"></i>&emsp;Max Speed: {{this.selectedProvider.max_speed}}</p>
+    <p><i class="fas fa-phone"></i> &emsp;{{this.selectedProvider.contact_n}}</p>
+    <p><i class="fas fa-envelope"></i>&emsp;{{this.selectedProvider.email}}</p>
+    <p><i class="fas fa-rupee-sign"></i>&emsp;{{this.selectedProvider.lowest_price}}</p>
+
+  </div>
+  <div class="ui secondary segment">
+    <p>Rating: </p>
+    <div class="ui star rating" #rating data-rating="3">
+      <p>{{this.selectedProvider.rating}}</p>
+    </div>
+  </div>
+  <div class="ui secondary segment">
+    <p>{{this.selectedProvider.description}} </p>
+  </div>
+</div>
+<ng-template #spinnerBlock>
+<!-- <div class="ui segments spinner-segment"> -->
+<div class="ui segment spinner-segment">
+  <div class="ui active inverted dimmer">
+    <div class="ui text loader">Loading ISP Description</div>
+  </div>
+<!-- </div> -->
+</div>
+</ng-template>

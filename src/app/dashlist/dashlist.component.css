@@ -1,0 +1,15 @@
+.ui.segment.isplist{
+    box-shadow: none;
+    border: none;
+    border-radius: none;
+}
+
+.ui.selection.list{
+    max-height: 370px;
+    overflow-y: auto;
+}
+
+.ui.segment{
+    height: 410px;
+    /* border: solid 1px; */
+}

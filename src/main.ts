@@ -8,5 +8,7 @@ if (environment.production) {
   enableProdMode();
 }
 
+console.log("Hello World");
+
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.log(err));

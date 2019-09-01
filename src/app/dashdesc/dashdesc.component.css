@@ -1,0 +1,13 @@
+.ui.segments>.ui.segment:first-child{
+    background-color:#2185d0;
+    color: white;
+}
+.ui.segment.secondary{
+    background-color:white;
+    color: black;
+}
+
+.ui.segment.spinner-segment{
+    height: 370px;
+    background-color: white; 
+}
